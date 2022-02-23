@@ -9,7 +9,7 @@ if(process.env.NODE_ENV === "development") app.use(cors());
 const server = http.createServer(app);
 const io = require("socket.io")(server);
 
-const connectedPeers = [];
+let connectedPeers = [];
 
 io.on('connection', (socket) => {
     connectedPeers.push(socket.id);
