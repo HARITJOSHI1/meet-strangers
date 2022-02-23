@@ -140,10 +140,9 @@ button {
   }
   
   .personal_code_input {
-    width: 100%;
+    width: 88%;
     height: 100%;
     background: rgba(196, 196, 196, 0.2);
-    background-filter: blur(80px);
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     color: white;

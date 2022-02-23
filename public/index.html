@@ -1,23 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>Meet Strangers</title>
-  </head>
 
-  <body>
-    <div class="main_container">
-      <div class="dashboard_container"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Meet Strangers</title>
+</head>
+
+<body>
+  <div class="main_container">
+    <div class="dashboard_container">
+      <div class="logo_container">
+        <img src="./utils/images/logo.png" alt="logo" />
       </div>
+      <div>
+        <div class="description_container">
+          <p class="description_container_paragraph">
+            Talk with other user by passing his personal code or talk with
+            strangers !
+          </p>
+        </div>
 
-      <div class="call_container"></div>
-      <div class="messenger_container"></div>
+        <div class="personal_code_container">
+          <div class="personal_code_title_container">
+            <p class="personal_code_title_paragraph">Your personal code</p>
+          </div>
+
+          <div class="personal_code_value_container">
+            <p class="personal_code_value_paragraph" id="personal_code_paragraph">
+              DDDD
+            </p>
+            <button class="personal_code_copy_button" id="personal_code_copy_button">
+              <img src="./utils/images/copyButton.png" alt="copy button" />
+            </button>
+          </div>
+        </div>
+
+        <div class="personal_code_connecting_container">
+          <p class="personal_code_connecting_paragraph">Personal Code</p>
+          <div class="personal_code_connecting_input_container">
+            <input type="text" id="personal_code_input" class="personal_code_input" />
+          </div>
+
+          <div class="personal_code_connecting_buttons_container">
+            <button class="connecting_button" id="personal_code_chat_button">
+              <img src="./utils/images/chatButton.png" alt="cb">
+            </button>
+
+            <button class="connecting_button" id="personal_code_video_button">
+              <img src="./utils/images/videoButton.png" alt="vb">
+            </button>
+
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="./js/main.js" type="module"></script>
-  </body>
+    <div class="call_container"></div>
+    <div class="messenger_container"></div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./js/main.js" type="module"></script>
+</body>
+
 </html>
