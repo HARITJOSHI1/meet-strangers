@@ -216,9 +216,9 @@ button {
     position: relative;
   }
   .new_message_input {
-    margin: 0 40px;
+    margin: 0 20px;
     margin-bottom: 30px;
-    width: calc(100% - 80px);
+    width: 67%;
     height: 60px;
     color: #676f7a;
     font-size: 16px;
