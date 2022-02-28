@@ -9,6 +9,9 @@ if(process.env.NODE_ENV === "development") app.use(cors());
 const server = http.createServer(app);
 const io = require("socket.io")(server);
 
+app.use(express.json());
+app.use(express.static(path.join(__dirname + '/public')));
+
 let connectedPeers = [];
 
 io.on('connection', (socket) => {
@@ -20,8 +23,6 @@ io.on('connection', (socket) => {
     });
 });
 
-app.use(express.json());
-app.use(express.static(path.join(__dirname + '/public')));
 app.get("/", (req, res) => res.render("index.html"));
 
 module.exports = server;

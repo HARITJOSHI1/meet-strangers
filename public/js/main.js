@@ -1,6 +1,11 @@
-const socket = io('/');
-socket.on('connect', () => {
-    console.log(`Client connected to socket.io with id ${socket.id}`);
-});
+import * as wss from './wss.js';
+import * as store from './store.js';
 
-console.log("hello");
+const socket = io(`/`);
+wss.registerSocketListeners(socket);
+
+const codeCpyBtn = document.getElementById('personal_code_copy_button');
+codeCpyBtn.addEventListener('click', () => {
+   const code = store.getState().socketId;
+   navigator.clipboard.writeText(code);
+});
